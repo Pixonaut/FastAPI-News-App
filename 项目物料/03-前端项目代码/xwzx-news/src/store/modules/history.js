@@ -135,7 +135,7 @@ export const useHistoryStore = defineStore('history', {
         
         if (response.data.code === 200) {
           console.log('删除浏览历史API：删除成功');
-          // 更新本地历史记录
+          // 更新本地历史记录（item.id 是新闻ID）
           this.removeHistory(id);
           return { success: true };
         } else {

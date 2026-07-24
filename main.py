@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.openapi.docs import get_swagger_ui_html
-from routers import news, users, favorite
+from routers import news, users, favorite, browse_history
 from fastapi.middleware.cors import CORSMiddleware
 
 from utils.exception_handlers import register_exception_handlers
@@ -36,3 +36,4 @@ def root():
 app.include_router(news.router)
 app.include_router(users.router)
 app.include_router(favorite.router)
+app.include_router(browse_history.router)
